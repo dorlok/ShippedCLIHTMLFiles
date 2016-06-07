@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="983" MadCap:lastWidth="850">
+    <head>
+        <link href="Resources/TableStyles/Horiz_lines.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Code_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>buildpack get</h1>
+        <p>Return one BuildPack or all BuildPacks. To get a list of available BuildPacks, issue the <a href="buildpack getall.htm">getall</a> command.</p>
+        <h6>Usage</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">buildpack get [&lt;buildpackId&gt;]</td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Argument and Option</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Argument and Option</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">buildpackId</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. If the ID of the BuildPack is not specified, all BuildPacks are returned. </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows" colspan="2"><b>Option</b>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">--full</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Return details of BuildPack fields. </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">--json</td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">Return information in JSON&#160;format. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Command Example</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">shipped --json --full buildpack get 1dd9c87b-0b3b-11e5-9cb9-7cd1c3e98f29</td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Return Example 1 -- returns information for a specific BuildPack </h6>
+        <p>
+            <img src="Resources/Images/buildpack_get.png" class="blue_border" />
+        </p>
+        <h6>Return Example 2 -- returns a specific BuildPack  in JSON&#160;format</h6>
+        <p>
+            <img src="Resources/Images/buildpack_get_full.png" class="blue_border" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

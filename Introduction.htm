@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2024" MadCap:lastWidth="965">
+    <head>
+        <link href="Resources/TableStyles/Horiz_lines.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Code_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Introduction</h1>
+        <p>Shipped is an integrated development, deployment, and operations solution — a centralized location that enables developers to manage all aspects of an application. Developers can authenticate with GitHub, assemble an application with various services and dependencies, and deploy it all to any public or on-premise cloud. Operations teams can monitor and receive alerts from running applications.</p>
+        <h2>Applications Used in Shipped</h2>
+        <p>Shipped automatically runs several OpenStack applications, which includes Docker and Drone. </p>
+        <h3>Docker</h3>
+        <p>Docker allows you to create completely isolated, repeatable, and deployable artifacts. Shipped uses it to run each of your services in isolation. Each service you add to your project has a corresponding Dockerfile that is exposed for you.</p>
+        <p>Visit <a href="https://www.docker.com/">Docker</a> for more information.</p>
+        <h3>Drone</h3>
+        <p>Drone provides continuous integration. Shipped adds a web hook into your service repositories; this web hook triggers a build in Drone each time a new commit is made on any branch. Build results show up in Shipped and successful builds show up on the <b>Deploy</b> page, ready to release to an Environment. Logs from failed builds are also available from the UI.</p>
+        <p>The Shipped-CLI bootstrap provides a default <i>.drone.yml</i> file for each service. You can edit and commit the .drone.yml file within that service directory.</p>
+        <p>Visit <a href="https://github.com/drone/drone">Drone </a>for more information.</p>
+        <p class="Comment">Questions: How do users install CLI?</p>
+        <h2>Authentication</h2>
+        <p class="Comment">Update</p>
+        <p>The first time you use the Shipped CLI, you must supply an API token. The token is saved for subsequent logins. Get the token from the Shipped UI: Go to the My Profile page and click Show My User Token.</p>
+        <h2>Command Syntax</h2>
+        <p>The Shipped CLI provides command line access to Shipped services. This includes services that can be performed with the Shipped UI, such as creating and updating projects and services, and deploying them to the cloud. It also provides commands for controlling your local environment, such as bootstrapping projects, building and testing changes.</p>
+        <p>Shipped CLI commands typically take the form:</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">command subcommand args</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="indent">where</div>
+        <div class="indent"><b>command</b> is a major area of Shipped (such as project, service, or build),</div>
+        <div class="indent"><b>subcommand</b> is what you want to do (such as create or list), and</div>
+        <div class="indent"><b>args</b> are additional arguments used by the command.</div>
+        <p>For example,</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">shipped build get  183d5961-71f5-11e5-b058-0242ac110238</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2> Help</h2>
+        <p>The <b>help</b> command gives you access to the built-in help. Type <span class="code">shipped -h</span> or <span class="code">shipped --help</span> to get a list of commands.</p>
+        <p>Some common commands are:</p>
+        <table style="mc-table-style: url('Resources/TableStyles/Horiz_lines.css');width: 100%;" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Command</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><span class="code">shipped help</span>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Overview of the CLI (same information as this page)</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><span class="code">shipped help <i>command</i></span>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Help on command <i>command</i></td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><span class="code">shipped help <i>command subcommand</i></span>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Help on <i>subcommand</i> of <i>command</i></td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><span class="code">shipped help workflow</span>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Overview of Shipped orchestrated workflow</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><span class="code">shipped wf help <i>workflowName</i></span>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Help on individual workflow script <i>workflowName</i></td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows"><span class="code">shipped help default</span>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">
+                        <p>Context sensitivity and default values features</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Comment">Note to Doris: Need to move the Options section</p>
+        <h2>Options</h2>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 136px;" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1" colspan="2">CLI</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">-b</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">--bootlogfile</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Name of file to write bootstrap log messages [default shipped-bootstrap.log].</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">-d</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">--debug</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <p>          Provide TRACE logging.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">-f</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">  --full</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <p>         Show full model (all elements) in command responses.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">-h</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">  --help</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <p>         Display help message for current command.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">-j</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">--json</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Output command responses in JSON format.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">-l</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">--logfile</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Name of file to write log messages, including TRACE messages (also SHIPPED_CLI_LOGFILE) [default shipped-cli.log].</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">-o</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">--output</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <p>         Comma-separated list of output field names.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">-p</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">  --project</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <p>Home directory for Shipped projects (also SHIPPED_PROJECT_HOME). </p>
+                        <p>When this option is provided, Shipped creates project directories as a subdirectory of SHIPPED_PROJECT_HOME, and automatically changes to this directory as needed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">-x</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">  --expanded</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <p>     Include expanded descriptions in wizard workflow.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">-s</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">--server</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">API server to access (also SHIPPED_API_SERVER) [default <a href="http://api.ciscoshipped.io/">http://api.ciscoshipped.io</a>].</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">-t</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">  --token</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Shipped API authentication token (also SHIPPED_API_TOKEN).</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">-v</td>
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">  --version</td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">
+                        <p>      Show Shipped CLI version and exit.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

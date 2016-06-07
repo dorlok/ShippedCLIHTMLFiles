@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2282" MadCap:lastWidth="937">
+    <head>
+        <link href="Resources/TableStyles/Important.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Horiz_lines.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Code_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>build deploy</h1>
+        <p>Deploy a project service specific build to a project deployment environment. Each build creates a unique Docker image tagged with commit ID in a Docker private repository. The deploy subcommand deploys a specific build image for a service.
+It sets the releaseId of the new release in the CLI context for the service, so subsequent commands (such as rlse get) default to fetching that release.</p>
+        <h6>Usage</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">Usage: build deploy  &lt;commitId&gt;  &lt;environmentId&gt; &lt;projectId&gt; &lt;serviceId&gt; [optional arguments]</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Important.css');" class="TableStyle-Important" cellspacing="0">
+            <col class="TableStyle-Important-Column-Column1" />
+            <col class="TableStyle-Important-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Important-Body-Body1">
+                    <td class="TableStyle-Important-BodyB-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Important-BodyA-Column2-Body1">Exercise caution when using optional arguments. Do not change the default values unless you have a good understanding of Shipped and container orchestration. For less experience users, you can use the build deployment form provided on the Shipped Web UI to customize optional arguments. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Argument and Option</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Argument and Option</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">&lt;commitId&gt;</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Required. The commit ID of the build to release.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">&lt;environmentId&gt;</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Required. The environment ID of the environment where the build should be released.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">&lt;projectId&gt;</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Required. The project ID of the project owing the service that was built.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">&lt;serviceId&gt;</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Required. The service ID of the service owning the build.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">ConfigID=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. ConfigID to be deployed.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">ContainerCount=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. Number of service containers to deploy.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">ContainerCPU=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. vCPU to allocate per container.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">ContainerPort=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional.  Port on which app running inside container.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">ContainerRAM=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. RAM in MB to be allocated for container.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">DeployedURL=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. Where the service is or would be running.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">DeployImage=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. The Docker image that got deployed.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">DeploymentId=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. Recommended default set by Shipped.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">EnvName=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. Recommended default set by Shipped.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">EnvVariables=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. Recommended default set by Shipped.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">ErrorMsg=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional.  Populated if there was a problem.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">HealthCheckMaxFailures=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. Health check failure before marking service as down, default by buildpack.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">HealthCheckPath=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional.  Health check endpoint URL, default by buildpack.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">HealthCheckProtocol=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional.  Health check protocol, default by buildpack.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">MarathonAppID=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. The marathon identifier for the app.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">RepoURL=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional.  The GitHub repo for the app.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">ServiceType=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. App, RepoApp, or Service.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">SnapshotID=</td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">Optional.  If multiple services are deployed from a single deploy, they all have the same snapshotID. Useful for rollbacks.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Example -- deploy process</h6>
+        <ol>
+            <li>
+                <p>Issue <b>build get</b>  from outside bootstrapped local development environment.</p>
+                <p>
+                    <img src="Resources/Images/build_deploy1.png" class="blue_border" />
+                </p>
+                <p>Since the command is executed outside the development environment, projectid and serviceid need to be passed explicitly to the <b>build get</b> command. However, Shipped automatically detects these IDs if the directory is changed to the service directory. </p>
+            </li>
+            <li>
+                <p><b>cd</b> to the projectname/sevicename directory in the bootstrapped environment. </p>
+                <p>Shipped CLI automatically detects both projecidt and serviceid; therefore, you do not need to enter these parameters  while making calls.</p>
+                <p>
+                    <img src="Resources/Images/build_deploy2.png" class="blue_border" />
+                </p>
+            </li>
+            <li>
+                <p>Issue <b>build getlogs</b> to fetch logs for a specific build. </p>
+                <p>
+                    <img src="Resources/Images/build_deploy3.png" class="blue_border" />
+                </p>
+                <p>The shipped command is issued from the service directory, allowing <span class="code">projectid</span> and <span class="code">serviceid </span>to be passed as $, indicating that they should take the default values. The <span class="code">buildid</span> parameter contains only the first few characters that uniquely identify it, and which the CLI expands internally. </p>
+                <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle-Note" cellspacing="0">
+                    <col class="TableStyle-Note-Column-Column1" />
+                    <col class="TableStyle-Note-Column-Column2" />
+                    <tbody>
+                        <tr class="TableStyle-Note-Body-Body1">
+                            <td class="TableStyle-Note-BodyB-Column1-Body1">&#160;</td>
+                            <td class="TableStyle-Note-BodyA-Column2-Body1">
+                                <p>Use dollar sign ($) in the argument position to use the default value; each $ represents one default. </p>
+                                <p>You only need enough leading characters of the UUID to uniquely identify the buildid.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Issue <b>build set</b> to set the specific buildId as default that will be used for subsequent calls to Shipped CLI. </p>
+                <p>
+                    <img src="Resources/Images/build_deploy4.png" class="blue_border" />
+                </p>
+            </li>
+            <li>
+                <p>Issue <b>build deploy</b> to deploy the build to the environment. </p>
+                <p>The release ID is returned. </p>
+                <p>
+                    <img src="Resources/Images/build_deploy5.png" class="blue_border" />
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>

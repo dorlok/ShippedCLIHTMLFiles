@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="675" MadCap:lastWidth="850">
+    <head>
+        <link href="Resources/TableStyles/Horiz_lines.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Code_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>build getlogs</h1>
+        <p>Return logs for a specific service build. Logs are <span class="code">stdout </span>and <span class="code">stderr </span>captured by CI server during execution of CI scripts specified in .drone.yml.</p>
+        <p>Currently, <span class="code">getlogs </span>is limited to logs that are available when the build is complete.</p>
+        <h6>Usage</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">build getlogs &lt;projectId&gt; &lt;serviceId&gt; &lt;buildId&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Argument and Option</h6>
+        <p class="Comment">need xref</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1">
+            </col>
+            <col class="TableStyle-Horiz_lines-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Argument and Option</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">&lt;projectId&gt;</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Required. The ID of the project for which to return the logs.  </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">&lt;serviceId&gt;</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Required. The ID of service for which to return the logs. </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">&lt;buildId&gt;</td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">Required. The ID of build for which to return the logs. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Command Example</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">shipped build getlogs  183d5961-71f5-11e5-b058-0242ac110238 271c696b-7360-11e5-9240-0242ac11026c 49260b7d-6afb-11e5-969a-0242ac11063c</td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Return Example</h6>
+        <p class="Comment">Need example</p>
+        <p>&#160;</p>
+    </body>
+</html>

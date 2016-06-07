@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="884" MadCap:lastWidth="783">
+    <head>
+        <link href="Resources/TableStyles/Code_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Horiz_lines.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>BuildPack</h1>
+        <p>Shipped offers a pre-built build package called BuildPack. A BuildPack provides the bare-bones code for developing a service. For example, if you are building a Ruby on Rails app, a BuildPack  would set up a working, deployable HelloWorld application with appropriate defaults. Using BuildPacks as starting points for your new applications saves time and simplifies the process.</p>
+        <p>Choosing a BuildPack automatically configures the default values for the following key areas in Shipped. Each of these can be customized as needed.</p>
+        <ul>
+            <li><b>Build</b>: The BuildPack sets up a build and test environment for the selected programming language. Required build/test tools for selected languages are installed with the build container. Default commands of building and testing service code is also auto configured.</li>
+            <li><b>Runtime</b>: Depending on the language and framework of the selected BuildPack, the runtime base container with installed runtime container is automatically configured. This also sets up other runtime configurations, such as exposing the default port. This can be customized by changing the FROM container in the Dockerfile service.</li>
+            <li><b>Sample Application</b>: Each BuildPack automatically populates a working HelloWorld sample code when creating a new GitHub repo. If a service is created for an existing repo, then the sample creation is skipped and the config files are added to the project folder.</li>
+        </ul>
+        <p>The following table lists and describes available subcommands of BuildPack.</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 184px;" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 218px;" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">BuildPack Subcommand</th>
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Description</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="buildpack get.htm">get</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">
+                        <p>Returns a specific BuildPack when a BuildPack ID is specified; otherwise, all BuildPacks are returned.</p>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">buildpack get [&lt;buildpackId&gt;]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="buildpack getall.htm">getall</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Returns a list of available BuildPacks . </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">buildpack getall</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows"><a href="buildpack set.htm">set</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">Sets the default BuildPack ID.</td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">buildpack set</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

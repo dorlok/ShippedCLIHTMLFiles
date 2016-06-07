@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="3494" MadCap:lastWidth="700">
+    <head>
+        <link href="Resources/TableStyles/Code_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Horiz_lines.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Release</h1>
+        <p>A release is a specific build deployed to a specific environment for a service. A release also includes a point in time snapshot of the service's configuration. Each versioned deployment of service on Shipped creates a unique release. Since release is a snapshot of a point in time, it cannot be modified or updated after creation.</p>
+        <p>The following table lists and describes available subcommands of release.&#160;</p>
+        <p>&#160;</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 184px;" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 218px;" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Release Subcommand</th>
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Description</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="release create.htm">create</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Deploy a project service build to an environment.</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">release create  &lt;commitId&gt;  &lt;environmentId&gt; &lt;projectId&gt; &lt;serviceId&gt; [optional arguments]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="release get.htm">get</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Return one or all releases for a project and environment.</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">release get &lt;projectId&gt; &lt;environmentId&gt; [&lt;releaseId&gt;]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="release getall.htm">getall</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Return all releases for a project and environment.</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">release getall &lt;projectId&gt; &lt;environmentId&gt;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="release getById.htm">getById</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Return a specific release for a project.</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">release getbyid &lt;projectId&gt; &lt;releaseId&gt;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows"><a href="release set.htm">set</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">Set the default release ID.</td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">release set &lt;releaseId&gt;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>Releases [rlse] manages a release.</p>
+        <p>&#160;</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1">
+            </col>
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 340px;">
+            </col>
+            <col class="TableStyle-Horiz_lines-Column-Column1">
+            </col>
+            <col class="TableStyle-Horiz_lines-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Command</th>
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Description</th>
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Usage</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Returns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><span class="code">Create</span>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">
+                        <p>Deploy a project service build to an environment. This command is an alias of the <span class="code">shipped build deploy</span> command and does the exact same operations. It sets the releaseId of the new release in the CLI context for the service, so that subsequent commands (such as <span class="code">rlse get</span>) default to fetching that release.</p>
+                        <p>Most of the optional parameters can be left to their default values, and should be modified only by users with a good understanding of Shipped and container orchestration. We recommend that new users wanting to customize optional parameters use the build deployment form provided on the Shipped web UI rather than using the CLI.</p>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">
+                        <p class="code">release create &lt;projectId&gt; &lt;serviceId&gt; &lt;commitId&gt; &lt;environmentId&gt; &lt;optionalArguments&gt;...</p>
+                        <p class="code">&lt;projectId&gt; (required) The project ID of the project owing the service that was built</p>
+                        <p class="code">&lt;serviceId&gt; (required) The service ID of the service owning the build</p>
+                        <p class="code">&lt;commitId&gt; (required) The commit ID of the build to release</p>
+                        <p class="code">&lt;environmentId&gt; (required) The environment ID of the environment where the build should be released</p>
+                        <p class="code">ConfigID=xxx (optional) ConfigID to be deployed.</p>
+                        <p class="code">ContainerCount=xxx (optional) Number of service Docker containers to deploy.</p>
+                        <p class="code">ContainerCPU=xxx (optional) Number of vCPUs to allocate per container.</p>
+                        <p class="code">ContainerPort=xxx (optional) Port used to access the app inside the container and that should be exposed outside the container.</p>
+                        <p class="code">ContainerRAM=xxx (optional) RAM in MB to be allocated for container.</p>
+                        <p class="code">DeployedURL=xxx (optional) Where the service is or would be running</p>
+                        <p class="code">DeployImage=xxx (optional) The Docker image that got deployed</p>
+                        <p class="code">DeploymentId=xxx (optional) Recommended default set by Shipped.</p>
+                        <p class="code">EnvName=xxx (optional) Recommended default set by Shipped.</p>
+                        <p class="code">EnvVariables=xxx (optional) Set additional configuration variables. These are set as env variable on Docker instances.</p>
+                        <p class="code">ErrorMsg=xxx (optional) Populated if there was a problem</p>
+                        <p class="code">HealthCheckMaxFailures=xxx (optional) Health check failure before marking service as down, default by buildpack.</p>
+                        <p class="code">HealthCheckPath=xxx (optional) Health check endpoint URL, default by buildpack.</p>
+                        <p class="code">HealthCheckProtocol=xxx (optional) Health check protocol, default by buildpack.</p>
+                        <p class="code">MarathonAppID=xxx (optional) The marathon identifier for the app</p>
+                        <p class="code">RepoURL=xxx (optional) The GitHub repo for the app</p>
+                        <p class="code">ServiceType=xxx (optional) App, RepoApp, or Service</p>
+                        <p class="code">SnapshotID=xxx (optional) If multiple services are deployed from a single deploy, they all have the same snapshotID. Useful for rollbacks</p>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">A Release struct</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><span class="code">Get</span>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Get either all releases or a single release for a project and environment. This return basic release information status, including the endpoint URL for service access. Run with <span class="code">--full --json</span> option if you need additional information such as commitId.</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">
+                        <p class="code">release get &lt;projectId&gt; &lt;environmentId&gt; [&lt;releaseId&gt;]</p>
+                        <p class="code">
+  &lt;projectId&gt; (required) ID of project for which to get releases</p>
+                        <p class="code">
+  &lt;environmentId&gt; (required) ID of environment for which to get releases
+  </p>
+                        <p class="code">&lt;releaseId&gt; (optional) The ID of the release to get; if omitted, gets all releases</p>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Either a release struct or an array of Release structs</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><span class="code">GetAll</span>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Get all releases for a project and environment. This return basic release information status, including the endpoint URL for service access. Run with <span class="code">--full --json</span> option if you need additional information such as commitId.</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">
+                        <p class="code">release getall &lt;projectId&gt; &lt;environmentId&gt;</p>
+                        <p class="code">
+  &lt;projectId&gt; (required) ID of project for which to get releases
+  </p>
+                        <p class="code">&lt;environmentId&gt; (required) ID of environment for which to get releases</p>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">An array of Release structs</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><span class="code">GetById</span>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Get a single release of a project. This return basic release information status, including the endpoint URL for service access. Run with <span class="code">--full --json</span> option if you need additional information such as commitId.</td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">
+                        <p class="code">release getbyid &lt;projectId&gt; &lt;releaseId&gt;</p>
+                        <p class="code">
+  &lt;projectId&gt; (required) ID of project for which to get releases</p>
+                        <p class="code">
+  &lt;releaseId&gt; (required) The ID of the release to get</p>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">A release struct</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows"><span class="code">Set</span>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">Set the default release ID in the service's local context. This will be used as default value for subsequent API calls.</td>
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">
+                        <p class="code">release set &lt;releaseId&gt;
+</p>
+                        <p class="code">  &lt;releaseId&gt; (required) ID of the release to set as the default</p>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows"><b>OK</b> if successful</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h6>Examples</h6>
+        <p>Get releases for a service:</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">
+                        <p>shipped release get</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="Resources/Images/io_get-release-service.png" class="blue_border">
+            </img>
+        </p>
+        <p>Get a specific release:</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">
+                        <p>shipped release getbyid $ e578c196-6b9b-11e5-96fe-0242ac11063c</p>
+                        <p>shipped release get</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="Resources/Images/io_get-release.png" class="blue_border">
+            </img>
+        </p>
+        <p>Create release of trigger deployment of build:</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">
+                        <p>shipped default get</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="Resources/Images/io_default-get.png" class="blue_border">
+            </img>
+        </p>
+        <p>Note that sincethe above default values are set in context, the two commands below have the same effect.</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">
+                        <p>shipped release create 8f005490-6ada-11e5-9686-0242ac11063c 9367df79-6ada-11e5-9687-0242ac11063c <br></br>16144e192f4fc3eb0ed5553f436609ed3676206a 11b81092-6b9b-11e5-96f9-0242ac11063c</p>
+                        <p>shipped release create</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="Resources/Images/io_release-create.png" class="blue_border">
+            </img>
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

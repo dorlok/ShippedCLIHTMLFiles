@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="717" MadCap:lastWidth="700">
+    <head>
+        <link href="Resources/TableStyles/Code_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Horiz_lines.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Service</h1>
+        <p>A Shipped service represents a microservice within an application. Services are independently deployable and buildable. Each service has its own local and remote GitHub repository, its own CI build, and its own Docker container with everything required to build and run the service. A Shipped application can contain any number of services.</p>
+        <p>The following table lists and describes available subcommands of service.&#160;</p>
+        <p>&#160;</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 184px;" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 218px;" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Service Subcommand</th>
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Description</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="service check.htm">check</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Verify if a service is ready.</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">service check &lt;projectId&gt; [&lt;serviceId&gt;]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="service create.htm">create</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Create a service. </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">&#160;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="service delete.htm">delete</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Delete a service.</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">service delete &lt;projectId&gt; &lt;serviceId&gt;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="service get.htm">get</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Return a specific service.</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">service get &lt;projectId&gt; [&lt;serviceId&gt;]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="service getall.htm">getall</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Return all services. </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">service getall &lt;projectId&gt; </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="service repair.htm">repair</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Repair a serivce.</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">service repair &lt;projectId&gt; &lt;serviceId&gt; </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows"><a href="service update.htm">update</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">Update information for a service.</td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">service update &lt;projectId&gt; &lt;serviceId&gt; [&lt;optional arguments&gt;]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

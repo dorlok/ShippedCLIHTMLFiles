@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="902" MadCap:lastWidth="752">
+    <head>
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Horiz_lines.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Code_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>service update</h1>
+        <p>Update  information for a service after it is created. </p>
+        <h6>Usage</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">service update &lt;projectId&gt; &lt;serviceId&gt; [&lt;optional arguments&gt;]</td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Argument and Option</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Argument and Option</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">&lt;projectId&gt;</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Required. The project ID of the project owing the service that was built.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">&lt;serviceId&gt;</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Required. The service ID of the service owning the build.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">BuildCommand=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. The shell command used to build the service. </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">ContainerPort=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional.  Port on which app running inside container.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">DefaultRAM=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. The default RAM in MB to be allocated for the new environment for this service.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">ImageSource=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. The Docker image  used for the service.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Name=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. The new name for the service. </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">RunCommand=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. The run command used by Docker for this service.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">TestCommand=</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Optional. The shell command used to run tests for the service.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">EnvVariables=</td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">Optional. Set environment variables  in the service container. Use a comma-separated list when multiple variables are specified, for example,  env=name1:var1,name2:var2.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Command Example</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">shipped svc upd 482f255f-7389-11e5-a785-0242ac11016c 271c696b-7360-11e5-9240-0242ac11026c DefaultRAM=512 -o "Name,ServiceID,DefaultRAM"</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle-Note" cellspacing="0">
+            <col class="TableStyle-Note-Column-Column1" />
+            <col class="TableStyle-Note-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Note-Body-Body1">
+                    <td class="TableStyle-Note-BodyB-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Note-BodyA-Column2-Body1">Use  the <b>-o</b> option to specify the output fields, which allows the results of the update to be seen.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Return </h6>
+        <p>
+            <img src="Resources/Images/service_update.png" class="blue_border" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="761" MadCap:lastWidth="783">
+    <head>
+        <link href="Resources/TableStyles/Code_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Horiz_lines.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Build</h1>
+        <p>Shipped auto-configures a continuous integration (CI) build pipeline for each service created within project. Shipped also (upon creation of a service) registers a callback hook in GitHub so every commit triggers a new build in the CI pipeline. The build job typically involves executing compiling source code, running unit test, static code analysis, code coverage, creating Docker image, and publishing a Docker image.</p>
+        <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Images/build.png"><img class="MCPopupThumbnail img imgscreenshot" data-mc-width="1008" data-mc-height="368" src="Resources/Images/build_thumb_0_16.png" tabindex="" /></a>
+        </p>
+        <p>Every commit on a GitHub repo triggers a new build and upon successful completion of a build new Docker image tagged with a commit ID is pushed to a project-specific Docker private repository. Modify the .drone.yml config file in the base directory of the source repository of the service to customize the CI build script.</p>
+        <p>The following table lists and describes available subcommands of build. </p>
+        <p>&#160;</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 184px;" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 218px;" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Build Subcommand</th>
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Description</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="build deploy.htm">deploy</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Deploy a project service specific build to a project deployment environment.</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">build deploy  &lt;commitId&gt;  &lt;environmentId&gt; &lt;projectId&gt; &lt;serviceId&gt; [optional arguments]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="build get.htm">get</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Return build details for one service or all services in a project. </td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">build get &lt;projectId&gt; [&lt;serviceId&gt;] [--latest]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows"><a href="build getlogs.htm">getlogs</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">Return logs for a specific service build.</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">build getlogs &lt;projectId&gt; &lt;serviceId&gt; &lt;buildId&gt;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows"><a href="build set.htm">set</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">Set the default build ID and commit ID in a service's CLI context.</td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">build set &lt;projectId&gt; &lt;serviceId&gt; [&lt;buildId&gt;] <br />[--latest]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

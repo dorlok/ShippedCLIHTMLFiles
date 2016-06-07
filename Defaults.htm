@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="739" MadCap:lastWidth="783">
+    <head>
+        <link href="Resources/TableStyles/Code_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Horiz_lines.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Defaults</h1>
+        <p>Many commands use one or more positional arguments that are usually UUIDs. Use the <b>service get</b> command as an example:</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">shipped service get &lt;projectId&gt; [&lt;serviceId&gt;]</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The command has two arguments, a required argument of a project ID and an optional argument of a serviceID. To supply these arguments:</p>
+        <ul>
+            <li>Invoke the CLI from a project or service directory, causing the project ID argument to default to the ID of the project. If you invoke the CLI from a service directory, the service ID is the default. This is Shipped CLI context sensitivity.</li>
+            <li>Supply the first few characters of the UUID, Docker-style, for either argument. For example, if the project ID is "c272e20d-6ab4-11e5-967e-0242ac11063c," simply specify <b>svc get c27</b>. You only need to specify enough leading characters to uniquely identify the project. </li>
+            <li>Supply a portion of the name of the project or service, preceded by a percent (%) symbol. For example, the project is named "Hello-World" and the service "my-php-service," you can specify <b>svc get %wor %php</b>. Note that a name specification is not case sensitive and can be any part of the name (not necessarily the beginning). You only need to specify enough characters to uniquely identify the project or service. </li>
+        </ul>
+        <p>The following table lists and describes available Defaults subcommands.</p>
+        <p>&#160;</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 184px;" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" style="width: 218px;" />
+            <col class="TableStyle-Horiz_lines-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Defaults Subcommand</th>
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Description</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows"><a href="defaults get.htm">get</a>
+                    </td>
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">Return the default values active in the current context. </td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">
+                        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+                            <col class="TableStyle-Code_Table-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-Code_Table-Body-Body1">
+                                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">defaults get</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

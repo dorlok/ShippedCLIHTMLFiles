@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="660" MadCap:lastWidth="926">
+    <head>
+        <link href="Resources/TableStyles/Horiz_lines.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Code_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>local build</h1>
+        <p>Build a service in its container. Compiles and builds a service in its container by running script bin/build (stored in the local repository but run in the container). Since this script runs in the service's container, it uses the support software (such as compilers) automatically provided in the container. The local GitHub repository is synced with the container, so you can use this command after updating source files to build with the changes and prepare them for local testing. </p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle-Note" cellspacing="0">
+            <col class="TableStyle-Note-Column-Column1" />
+            <col class="TableStyle-Note-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Note-Body-Body1">
+                    <td class="TableStyle-Note-BodyB-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Note-BodyA-Column2-Body1">This command is available only after a full bootstrap. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Usage</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">lcl build &lt;projectId&gt; &lt;serviceId&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Argument and Option</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Horiz_lines.css');" class="TableStyle-Horiz_lines" cellspacing="0">
+            <col class="TableStyle-Horiz_lines-Column-Column1">
+            </col>
+            <col class="TableStyle-Horiz_lines-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-Horiz_lines-Head-Header1">
+                    <th class="TableStyle-Horiz_lines-HeadE-Column1-Header1">Argument and Option</th>
+                    <th class="TableStyle-Horiz_lines-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyE-Column1-LightRows">&lt;projectId&gt;</td>
+                    <td class="TableStyle-Horiz_lines-BodyD-Column1-LightRows">Required. The ID of the project to build.</td>
+                </tr>
+                <tr class="TableStyle-Horiz_lines-Body-LightRows">
+                    <td class="TableStyle-Horiz_lines-BodyB-Column1-LightRows">&lt;serviceId&gt;</td>
+                    <td class="TableStyle-Horiz_lines-BodyA-Column1-LightRows">
+                        <p>Required. The ID of the service to build.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Command Example</h6>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Code_Table.css');" class="TableStyle-Code_Table" cellspacing="0">
+            <col class="TableStyle-Code_Table-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-Code_Table-Body-Body1">
+                    <td class="TableStyle-Code_Table-BodyA-Column1-Body1">shipped local build 8f005490-6ada-11e5-9686-0242ac11063c 271c696b-7360-11e5-9240-0242ac11026c</td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Return Example</h6>
+        <p class="Comment">Question:&#160;Need example</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>
